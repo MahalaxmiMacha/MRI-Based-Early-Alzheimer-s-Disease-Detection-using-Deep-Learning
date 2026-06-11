@@ -21,7 +21,7 @@ model = load_model(
         'mobilenetv2_alzheimer_model.keras'
     )
 )
-
+model = load_model(MODEL_PATH)
 
 # Class names
 classes = ['AD', 'CN', 'EMCI', 'LMCI']
