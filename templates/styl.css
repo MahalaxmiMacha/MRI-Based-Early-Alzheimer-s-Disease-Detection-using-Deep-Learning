@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.container {
+    position: relative;
+    border: 2px dashed #aaa;
+    padding: 20px;
+    height: 500px;
+    background-color: #f8f8f8;
+    margin-bottom: 40px;
+}
+
+/* Base style for all boxes */
+.box {
+    width: 150px;
+    height: 80px;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Different positions */
+.static {
+    position: static;
+    background-color: #666;
+}
+
+.relative {
+    position: relative;
+    background-color: #357;
+    top: 10px;
+    left: 10px;
+}
+
+.absolute {
+    position: absolute;
+    background-color: #c33;
+    top: 40px;
+    right: 40px;
+}
+
+.fixed {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: #f90;
+}
+
+.sticky-section {
+    margin-top: 100px;
+    padding: 20px;
+    background: #eaeaea;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: #2c6;
+}

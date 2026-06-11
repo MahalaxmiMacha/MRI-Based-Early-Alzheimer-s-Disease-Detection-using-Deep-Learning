@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home | Alzheimer Detection</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 18px;
+    }
+  
+    .hero-section {
+      background-image: url("/static/images/brain_img2.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 120px 20px;
+      color: white;
+      text-align: center;
+      margin-bottom: 60px; /* spacing after hero section */
+    }
+  
+    .hero-heading {
+      font-size: 3.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px #000;
+      font-family: 'Times New Roman', Times, serif;
+    }
+  
+    .section {
+      padding: 60px 20px;   /* vertical padding */
+      margin-bottom: 60px;  /* space below each section */
+    }
+  
+    .section h2 {
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      font-size: 2rem;
+      margin-bottom: 40px; /* space below section heading */
+      color: #1d3557;
+    }
+  
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+    }
+  
+    .card-text {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  </style>
+  
+  
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1 class="hero-heading">MRI Image Based Early Alzheimer’s Detection using Deep Learning</h1>
+  </div>
+
+  <!-- Alzheimer Disease Types -->
+<div class="container section">
+  <h2 class="text-center mb-4">Alzheimer Disease Types</h2>
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Alzheimer’s Disease (AD)</h5>
+          <p class="card-text">A progressive neurological condition causing memory loss, confusion, and personality changes. Brain imaging reveals shrinkage, especially in the hippocampus.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm mt-2">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Cognitively Normal (CN)</h5>
+          <p class="card-text">Individuals with no memory problems or impairment. Used as a control group in research for comparison with affected groups.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm mt-2">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Early Mild Cognitive Impairment (EMCI)</h5>
+          <p class="card-text">Mild memory or concentration issues that don’t yet affect daily life. Early diagnosis can significantly help progression control.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm mt-2">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Late Mild Cognitive Impairment (LMCI)</h5>
+          <p class="card-text">A more advanced MCI stage with noticeable symptoms. Daily tasks may be affected; often a precursor to Alzheimer’s.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm mt-2">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Buttons Section -->
+<div class="container section text-center">
+  {% if not session.logged_in %}
+    <a href="/login" class="btn btn-primary btn-lg">Login</a>
+  {% else %}
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="/predict" class="btn btn-success btn-lg">Upload MRI Image</a>
+      <a href="/logout" class="btn btn-danger btn-lg">Logout</a>
+    </div>
+  {% endif %}
+</div>
+
+
+
+</body>
+</html>
