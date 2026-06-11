@@ -12,15 +12,12 @@ app.secret_key = 'your_secret_key'  # Use a strong random key in production
 UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), 'static', 'uploads')
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-
-# ✅ Load the trained model (correct absolute path)
-model = load_model(
-    os.path.join(
-        os.path.dirname(__file__),
-        'saved_folder',
-        'mobilenetv2_alzheimer_model.keras'
-    )
+MODEL_PATH = os.path.join(
+    os.path.dirname(__file__),
+    'saved_folder',
+    'mobilenetv2_alzheimer_model.keras'
 )
+
 model = load_model(MODEL_PATH)
 
 # Class names
