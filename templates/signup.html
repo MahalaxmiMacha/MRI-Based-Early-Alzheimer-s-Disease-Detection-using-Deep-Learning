@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Alzheimer MRI Detection</title>
+    <title>Create Account - Alzheimer MRI Detection</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -17,22 +17,22 @@
             font-family: 'Times New Roman', Times, serif;
         }
 
-        .login-card {
+        .signup-card {
             width: 100%;
-            max-width: 450px;
+            max-width: 500px;
             border: none;
             border-radius: 20px;
             overflow: hidden;
         }
 
         .card-header-custom {
-            background-color: #0d6efd;
+            background-color: #198754;
             color: white;
             text-align: center;
             padding: 25px;
         }
 
-        .btn-login {
+        .btn-signup {
             border-radius: 10px;
             padding: 10px;
             font-weight: 600;
@@ -52,13 +52,12 @@
 <div class="container">
     <div class="row justify-content-center">
 
-        <div class="col-md-6 col-lg-5">
+        <div class="col-md-7 col-lg-6">
 
-            <div class="card shadow-lg login-card">
+            <div class="card shadow-lg signup-card">
 
                 <div class="card-header-custom">
-                    <h2>Secure Access Portal</h2>
-
+                    <h2>Create Account</h2>
                     <p>
                         MRI-Based Early Alzheimer's Disease Detection
                     </p>
@@ -66,30 +65,34 @@
 
                 <div class="card-body p-4">
 
-                    {% if error %}
-                        <div class="alert alert-danger">
-                            {{ error }}
-                        </div>
-                    {% endif %}
-
                     {% with messages = get_flashed_messages() %}
                         {% if messages %}
                             {% for message in messages %}
-                                <div class="alert alert-success">
+                                <div class="alert alert-warning">
                                     {{ message }}
                                 </div>
                             {% endfor %}
                         {% endif %}
                     {% endwith %}
 
-                    <form method="POST" action="/login">
+                    <form method="POST" action="/signup">
 
                         <div class="mb-3">
-
                             <label class="form-label">
+                                Username
+                            </label>
 
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="username"
+                                placeholder="Enter username"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">
                                 Email Address
-
                             </label>
 
                             <input
@@ -98,36 +101,30 @@
                                 name="email"
                                 placeholder="Enter email"
                                 required>
-
                         </div>
 
                         <div class="mb-4">
-
                             <label class="form-label">
-
                                 Password
-
                             </label>
 
                             <input
                                 type="password"
                                 class="form-control"
                                 name="password"
-                                placeholder="Enter password"
+                                placeholder="Create password"
+                                minlength="6"
                                 required>
-
                         </div>
 
                         <div class="d-grid">
-
                             <button
                                 type="submit"
-                                class="btn btn-primary btn-login">
+                                class="btn btn-success btn-signup">
 
-                                Log In
+                                Create Account
 
                             </button>
-
                         </div>
 
                     </form>
@@ -136,16 +133,14 @@
 
                     <div class="text-center">
 
-                        <p>
+                        Already have an account?
 
-                            Don't have an account?
+                        <br><br>
 
-                        </p>
+                        <a href="/login"
+                           class="btn btn-primary">
 
-                        <a href="/signup"
-                           class="btn btn-success">
-
-                            Create Account
+                            Log In
 
                         </a>
 
