@@ -12,6 +12,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
+with app.app_context():
+    db.create_all()
 
 # ✅ Create uploads folder automatically
 UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), 'static', 'uploads')
@@ -170,8 +172,4 @@ def index():
 
 
 if __name__ == '__main__':
-
-    with app.app_context():
-        db.create_all()
-
     app.run(debug=True)
