@@ -12,8 +12,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
-with app.app_context():
-    db.create_all()
 
 # ✅ Create uploads folder automatically
 UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), 'static', 'uploads')
@@ -30,7 +28,7 @@ model = load_model(MODEL_PATH)
 # Class names
 classes = ['AD', 'CN', 'EMCI', 'LMCI']
 
-# Descriptions for each class
+# Descriptions
 descriptions = {
     'AD': "Alzheimer's Disease: Significant memory loss, confusion, and behavioral changes. (Severe Stage)",
     'CN': "Cognitively Normal: No signs of memory problems or thinking issues.",
@@ -38,7 +36,6 @@ descriptions = {
     'LMCI': "Late Mild Cognitive Impairment: More obvious memory and thinking problems. High risk of progressing to Alzheimer's."
 }
 
-# Stage mapping
 stage_mapping = {
     'CN': '1st Stage',
     'EMCI': '2nd Stage',
@@ -46,11 +43,17 @@ stage_mapping = {
     'AD': '4th Stage'
 }
 
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(255), nullable=False)
+
+
+# ✅ CREATE TABLES HERE
+with app.app_context():
+    db.create_all()
 
 
 @app.route('/home')
