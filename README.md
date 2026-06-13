@@ -44,21 +44,37 @@ The application also includes a user authentication system that allows users to 
 
 ## Project Structure
 project/
+
 ├── app.py
+
 ├── requirements.txt
+
 ├── Procfile
+
 ├── runtime.txt
+
 ├── saved_folder/
-│   └── mobilenetv2_alzheimer_model.keras
+
+│ └── mobilenetv2_alzheimer_model.keras
+
 ├── templates/
-│   ├── home.html
-│   ├── login.html
-│   ├── signup.html
-│   ├── predict.html
-│   └── result.html
-├── static
-│   ├── images/
-│   └── uploads/
+
+│ ├── home.html
+
+│ ├── login.html
+
+│ ├── signup.html
+
+│ ├── predict.html
+
+│ └── result.html
+
+├── static/
+
+│ ├── images/
+
+│ └── uploads/
+
 └── README.md
 
 ## Workflow
