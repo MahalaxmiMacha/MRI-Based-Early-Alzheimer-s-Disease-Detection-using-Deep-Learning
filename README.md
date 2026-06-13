@@ -8,6 +8,7 @@ The system classifies MRI images into one of the following categories:
 * Early Mild Cognitive Impairment (EMCI)
 * Late Mild Cognitive Impairment (LMCI)
 * Alzheimer's Disease (AD)
+  
 The application also includes a user authentication system that allows users to create accounts, log in securely, and access the prediction service.
 
 ## Features
@@ -44,7 +45,6 @@ The application also includes a user authentication system that allows users to 
 
 ## Project Structure
 project/
-
 ├── app.py
 
 ├── requirements.txt
@@ -88,6 +88,7 @@ project/
 ## Installation and Setup
 ### Clone the repository
 git clone https://github.com/MahalaxmiMacha/MRI-Based-Early-Alzheimer-s-Disease-Detection-using-Deep-Learning/tree/main
+
 cd Early-Alzheimer-Disease-Detection-using-Deep-Learning
 
 ### Install dependencies
@@ -97,6 +98,7 @@ pip install -r requirements.txt
 python app.py
 
 The application will be available at:
+
 https://early-alzheimer-disease-detection-using-gw68.onrender.com/home
 
 ## Dataset
@@ -120,5 +122,7 @@ This application is intended for educational and research purposes only. The pre
 
 ## Author
 Mahalaxmi Macha
+
 Bachelor of Technology (Computer Science and Engineering)
+
 Project developed as part of academic learning and exploration in the field of deep learning and healthcare applications.
