@@ -123,5 +123,7 @@ This application is intended for educational and research purposes only. The pre
 
 ## Author
 Mahalaxmi Macha
-Bachelor of Technology (Computer Science and Engineering).
+
+Bachelor of Technology (Computer Science and Engineering)
+
 Project developed as part of academic learning and exploration in the field of deep learning and healthcare applications.
