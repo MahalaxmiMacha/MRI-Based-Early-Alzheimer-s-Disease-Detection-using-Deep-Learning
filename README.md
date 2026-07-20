@@ -1,175 +1,266 @@
-# MRI Image Based Early Alzheimer's Disease Detection using Deep Learning
+<div align="center">
 
-## Live Demo
+# 🧠 MRI Image Based Early Alzheimer's Disease Detection using Deep Learning
 
-Application URL: https://early-alzheimer-disease-detection-using-gw68.onrender.com/home
+### An AI-powered web application that predicts Alzheimer's disease stages from MRI brain scans using Deep Learning.
 
----
+<img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"/>
+<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
+<img src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white"/>
+<img src="https://img.shields.io/badge/MobileNetV2-4285F4?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black"/>
+<img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge"/>
 
-## Overview
-
-Alzheimer's disease is a progressive neurological disorder that affects memory, thinking ability, and daily functioning. Early detection plays a vital role in slowing disease progression and improving patient care.
-
-This project presents a web-based application that predicts the stage of Alzheimer's disease using MRI brain images. A deep learning model trained on MRI scans is integrated with a Flask application to provide an easy-to-use interface for users to upload images and obtain prediction results.
-
-The system classifies MRI images into one of the following categories:
-
-* Cognitively Normal (CN)
-* Early Mild Cognitive Impairment (EMCI)
-* Late Mild Cognitive Impairment (LMCI)
-* Alzheimer's Disease (AD)
-
-The application also includes a user authentication system that allows users to create accounts, log in securely, and access the prediction service.
+</div>
 
 ---
 
-## Features
+# 🚀 Live Demo
 
-* User registration and login functionality
-* Secure password storage using hashing
-* MRI image upload through a web interface
-* Automated image preprocessing
-* Alzheimer's stage prediction using a trained deep learning model
-* Display of disease stage along with a brief description
-* Responsive user interface developed using Bootstrap
-* Cloud deployment using Render
+> **Application URL**
+
+**https://early-alzheimer-disease-detection-using-gw68.onrender.com/home**
 
 ---
 
-## Technologies Used
+# 📖 Overview
 
-### Frontend
+Alzheimer's disease is a progressive neurological disorder that gradually affects memory, thinking ability, and daily life. Early diagnosis plays a significant role in slowing disease progression and enabling timely medical intervention.
 
-* HTML
-* CSS
-* Bootstrap
+This project presents an AI-powered web application that predicts the stage of Alzheimer's disease from MRI brain images using a Deep Learning model based on **MobileNetV2**. The trained model is integrated into a Flask web application, allowing users to upload MRI scans and receive instant predictions through a simple and user-friendly interface.
 
-### Backend
-
-* Python
-* Flask
-* Flask-SQLAlchemy
-
-### Deep Learning
-
-* TensorFlow
-* Keras
-* MobileNetV2
-
-### Database
-
-* SQLite
-
-### Deployment
-
-* Render
+The application also provides secure user authentication, enabling registered users to access the prediction service safely.
 
 ---
 
-## Project Structure
+# 🎯 Disease Classification
 
-project/
+The model classifies MRI brain images into one of the following stages:
 
+| Stage | Description |
+|--------|-------------|
+| 🟢 CN | Cognitively Normal |
+| 🟡 EMCI | Early Mild Cognitive Impairment |
+| 🟠 LMCI | Late Mild Cognitive Impairment |
+| 🔴 AD | Alzheimer's Disease |
+
+---
+
+# ✨ Features
+
+- 🧠 MRI image-based Alzheimer's disease prediction
+- 🤖 Deep Learning model powered by MobileNetV2
+- 📤 MRI image upload through a web interface
+- ⚙️ Automatic image preprocessing
+- 🔐 Secure user registration and login
+- 🔒 Password hashing for enhanced security
+- 📊 Instant disease stage prediction
+- 📄 Disease description displayed with prediction
+- 💻 Responsive Bootstrap-based interface
+- ☁️ Cloud deployment using Render
+
+---
+
+# 🏗️ System Architecture
+
+```text
+                    User
+                      │
+                      ▼
+               Flask Web Application
+                      │
+                      ▼
+          User Authentication Module
+                      │
+                      ▼
+             MRI Image Upload
+                      │
+                      ▼
+         Image Preprocessing Layer
+      (Resize • Normalize • Convert)
+                      │
+                      ▼
+        MobileNetV2 Deep Learning Model
+                      │
+                      ▼
+          Alzheimer's Stage Prediction
+                      │
+                      ▼
+           Prediction Result Page
+```
+
+---
+
+# 📂 Project Structure
+
+```text
+MRI-Based-Early-Alzheimer-Detection/
+│
 ├── app.py
-
 ├── requirements.txt
-
 ├── Procfile
-
 ├── runtime.txt
-
+│
 ├── saved_folder/
-
 │   └── mobilenetv2_alzheimer_model.keras
-
+│
 ├── templates/
-
 │   ├── home.html
-
 │   ├── login.html
-
 │   ├── signup.html
-
 │   ├── predict.html
-
 │   └── result.html
-
+│
 ├── static/
-
 │   ├── images/
-
 │   └── uploads/
-
+│
 └── README.md
+```
 
 ---
 
-## Workflow
+# 🛠️ Technology Stack
 
-1. The user creates an account or logs into the application.
-2. After authentication, the user uploads an MRI image.
-3. The uploaded image is resized and preprocessed.
-4. The trained MobileNetV2 model performs prediction.
-5. The predicted class is mapped to the corresponding disease stage.
-6. The result is displayed along with relevant information.
+| Layer | Technology |
+|---------|------------|
+| Frontend | HTML, CSS, Bootstrap |
+| Backend | Python, Flask |
+| Deep Learning | TensorFlow, Keras |
+| Model Architecture | MobileNetV2 |
+| Database | SQLite |
+| ORM | Flask-SQLAlchemy |
+| Image Processing | TensorFlow/Keras |
+| Deployment | Render |
+| Programming Language | Python 3.10+ |
 
 ---
 
-## Installation and Setup
+# ⚙️ Installation
 
-### Clone the repository
+## 1. Clone Repository
 
-git clone https://github.com/MahalaxmiMacha/MRI-Based-Early-Alzheimer-s-Disease-Detection-using-Deep-Learning/tree/main
+```bash
+git clone https://github.com/MahalaxmiMacha/MRI-Based-Early-Alzheimer-s-Disease-Detection-using-Deep-Learning.git
 
 cd Early-Alzheimer-Disease-Detection-using-Deep-Learning
+```
 
-### Install dependencies
+## 2. Install Dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-### Run the application
+## 3. Run the Application
 
+```bash
 python app.py
+```
 
-The application will be available at:
+Open your browser and visit:
 
-https://early-alzheimer-disease-detection-using-gw68.onrender.com/home
-
----
-
-## Dataset
-
-The model was trained using MRI brain scan images categorized into four classes representing different stages of Alzheimer's disease progression.
-
-The classes used are:
-
-* CN – Cognitively Normal
-* EMCI – Early Mild Cognitive Impairment
-* LMCI – Late Mild Cognitive Impairment
-* AD – Alzheimer's Disease
+```
+http://127.0.0.1:5000
+```
 
 ---
 
-## Future Enhancements
+# 📋 Workflow
 
-* Integration of Google Sign-In authentication
-* Prediction history for registered users
-* Email verification and password recovery
-* Confidence score visualization for predictions
-* Migration from SQLite to PostgreSQL for large-scale usage
+### Step 1
+
+Create an account or log in securely.
+
+### Step 2
+
+Upload an MRI brain scan image.
+
+### Step 3
+
+The uploaded image is automatically resized and preprocessed.
+
+### Step 4
+
+The trained MobileNetV2 model analyzes the MRI scan.
+
+### Step 5
+
+The model predicts the Alzheimer's disease stage.
+
+### Step 6
+
+The application displays the predicted stage along with a brief explanation.
 
 ---
 
-## Disclaimer
+# 🗂️ Dataset
 
-This application is intended for educational and research purposes only. The predictions generated by the model should not be considered as a substitute for professional medical diagnosis or clinical decision-making.
+The Deep Learning model was trained on MRI brain scan images categorized into four stages of Alzheimer's disease progression.
+
+### Classes
+
+- 🟢 CN — Cognitively Normal
+- 🟡 EMCI — Early Mild Cognitive Impairment
+- 🟠 LMCI — Late Mild Cognitive Impairment
+- 🔴 AD — Alzheimer's Disease
 
 ---
 
-## Author
+# 🌟 Key Highlights
 
-Mahalaxmi Macha
+- AI-powered medical image classification
+- MobileNetV2 transfer learning architecture
+- Secure authentication system
+- Automatic MRI preprocessing
+- Fast and accurate disease stage prediction
+- Responsive web application
+- Cloud deployment using Render
+- User-friendly interface for healthcare research
+
+---
+
+# 🚀 Future Enhancements
+
+- Google Sign-In authentication
+- Email verification and password recovery
+- Prediction history for registered users
+- Confidence score visualization
+- Explainable AI (Grad-CAM heatmaps)
+- PostgreSQL integration
+- REST API for hospital integration
+- Doctor dashboard
+- Multi-disease brain MRI classification
+
+---
+
+# ⚠️ Disclaimer
+
+This project is intended **for educational and research purposes only**.
+
+The predictions generated by this application should **not** be considered a substitute for professional medical diagnosis, clinical evaluation, or healthcare advice. Always consult qualified medical professionals for diagnosis and treatment decisions.
+
+---
+
+# 📄 License
+
+This project is released under the **MIT License**.
+
+---
+
+# 👩‍💻 Author
+
+**Mahalaxmi Macha**
 
 Bachelor of Technology (Computer Science and Engineering)
 
-Project developed as part of academic learning and exploration in the field of deep learning and healthcare applications.
+This project was developed as part of academic learning and research in Deep Learning, Computer Vision, and Healthcare AI.
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project useful, consider giving it a star on GitHub!
+
+</div>
